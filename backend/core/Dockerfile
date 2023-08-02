@@ -15,4 +15,4 @@ RUN chmod +x /code/scripts/start.sh
 
 COPY . /code
 
-ENTRYPOINT ["bash", "/code/scripts/start.sh", "PORT=8080"]
+ENTRYPOINT ["bash", "/code/scripts/start.sh"]
