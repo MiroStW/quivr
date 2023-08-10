@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Check if gpt4all is already installed
-if ! pip show gpt4all > /dev/null; then
-    if [[ $PRIVATE == "True" ]]; then
+# if ! pip show gpt4all > /dev/null; then
+     if [[ $PRIVATE == "True" ]]; then
         apt-get install -y liblzma-dev cmake
 
         cd /tmp && git clone --recurse-submodules https://github.com/nomic-ai/gpt4all
@@ -12,7 +12,8 @@ if ! pip show gpt4all > /dev/null; then
         cd ../../gpt4all-bindings/python
         pip3 install -e .
     fi
-fi
+# fi
+
 
 # Move to the code directory
 cd /code
@@ -20,4 +21,4 @@ cd /code
 # Start your app
 # uvicorn main:app --reload --host 0.0.0.0 --port 8080
 # uvicorn.run("main:app", host="127.0.0.1", port=8080, log_level="info")
-gunicorn -k uvicorn.workers.UvicornWorker --host 0.0.0.0 --port 8080
+gunicorn -k uvicorn.workers.UvicornWorker 0.0.0.0:8080
