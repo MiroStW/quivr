@@ -14,11 +14,10 @@
     fi
 # fi
 
-
 # Move to the code directory
 cd /code
 
 # Start your app
-# uvicorn main:app --reload --host 0.0.0.0 --port 8080
+ uvicorn main:app --reload --host 0.0.0.0 --port 8080
 # uvicorn.run("main:app", host="127.0.0.1", port=8080, log_level="info")
-gunicorn -k uvicorn.workers.UvicornWorker 0.0.0.0:8080
+# gunicorn -k uvicorn.workers.UvicornWorker 0.0.0.0:8080
