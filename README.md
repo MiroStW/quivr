@@ -4,7 +4,6 @@
     <img src="./logo.png" alt="Quivr-logo" width="30%"  style="border-radius: 50%; padding-bottom: 20px"/>
 </div>
 
-
 [![Discord Follow](https://dcbadge.vercel.app/api/server/HUpRgp2HG8?style=flat)](https://discord.gg/HUpRgp2HG8)
 [![GitHub Repo stars](https://img.shields.io/github/stars/stangirard/quivr?style=social)](https://github.com/stangirard/quivr)
 [![Twitter Follow](https://img.shields.io/twitter/follow/StanGirard?style=social)](https://twitter.com/_StanGirard)
@@ -38,7 +37,7 @@ https://github.com/StanGirard/quivr/assets/19614572/a6463b73-76c7-4bc0-978d-7056
 
 ## Disclaimer ⚠️
 
-For a little while, Quivr will be only compatible with OpenAI API. 
+For a little while, Quivr will be only compatible with OpenAI API.
 
 If you want to use a Local LLM please refer to [v0.0.46](https://github.com/StanGirard/quivr/releases/tag/v0.0.46).
 
@@ -135,7 +134,7 @@ Additionally, you'll need a [Supabase](https://supabase.com/) account for:
   docker compose -f docker-compose.yml up --build
   ```
 
-- **Step 6**: Navigate to `localhost:3000` in your browser
+- **Step 6**: Navigate to `localhost:8080` in your browser
 
 - **Step 7**: Want to contribute to the project?
 

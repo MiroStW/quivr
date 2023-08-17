@@ -4,6 +4,7 @@ origins = [
     "http://localhost",
     "http://localhost:3000",
     "http://localhost:3001",
+    "http://localhost:8080",
     "https://quivr.app",
     "https://www.quivr.app",
     "http://quivr.app",

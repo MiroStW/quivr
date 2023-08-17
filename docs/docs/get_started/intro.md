@@ -114,7 +114,7 @@ All the scripts can be found in the [scripts](https://github.com/stangirard/quiv
 docker compose -f docker-compose.yml up --build
 ```
 
-- **Step 6**: Navigate to `localhost:3000` in your browser
+- **Step 6**: Navigate to `localhost:8080` in your browser
 
 - **Step 7**: Want to contribute to the project?
 
