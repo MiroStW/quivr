@@ -13,13 +13,13 @@ WORKDIR /app
 
 # Copy package.json and yarn.lock
 # to the /app working directory
-COPY package*.json yarn.lock ./
+COPY ./frontend/package*.json ./frontend/yarn.lock ./
 
 # Install dependencies in /app
 RUN yarn install --network-timeout 1000000
 
 # Copy the rest of our Next.js folder into /app
-COPY . .
+COPY ./frontend .
 
 # Build the Next.js application
 RUN yarn build

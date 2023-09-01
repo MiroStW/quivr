@@ -1,0 +1,16 @@
+[
+  {
+    "name": "delete-after-1-day",
+    "action": { "type": "Delete" },
+    "condition": {
+      "olderThan": "1d"
+    }
+  },
+  {
+    "name": "Keepk-at-least-1",
+    "action": { "type": "Keep" },
+    "mostRecentVersions": {
+      "keepCount": 1
+    }
+  }
+]
