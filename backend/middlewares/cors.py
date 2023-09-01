@@ -1,15 +1,10 @@
 from fastapi.middleware.cors import CORSMiddleware
 
 origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "http://localhost:3001",
-    "http://localhost:8080",
-    "https://quivr.app",
-    "https://www.quivr.app",
-    "http://quivr.app",
-    "http://www.quivr.app",
-    "*",
+    "https://quivr-frontend-3xr5bwxmyq-ey.a.run.app",
+    "https://quivr-frontend-3xr5bwxmyq-ey.a.run.app:8080",
+    "localhost:8080",
+    "localhost"
 ]
 
 
