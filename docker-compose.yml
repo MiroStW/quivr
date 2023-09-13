@@ -1,19 +1,6 @@
 version: "3"
 
 services:
-  traefik:
-    image: traefik:v2.10
-    command:
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:5050"
-    ports:
-      - "5050:5050"
-      - "8080:8080" # For the Traefik dashboard (optional)
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-
   frontend:
     env_file:
       - ./frontend/.env
@@ -35,11 +22,6 @@ services:
     restart: always
     volumes:
       - ./backend/:/code/
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.backend-core.rule=PathPrefix(`/`)"
-      - "traefik.http.routers.backend-core.entrypoints=web"
-      - "traefik.http.services.backend-core.loadbalancer.server.port=5050"
 
   backend-chat:
     env_file:
@@ -52,11 +34,6 @@ services:
     restart: always
     volumes:
       - ./backend/:/code/
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.backend-chat.rule=PathPrefix(`/chat`)"
-      - "traefik.http.routers.backend-chat.entrypoints=web"
-      - "traefik.http.services.backend-chat.loadbalancer.server.port=5050"
 
   backend-crawl:
     env_file:
@@ -69,11 +46,6 @@ services:
     restart: always
     volumes:
       - ./backend/:/code/
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.backend-crawl.rule=PathPrefix(`/crawl`)"
-      - "traefik.http.routers.backend-crawl.entrypoints=web"
-      - "traefik.http.services.backend-crawl.loadbalancer.server.port=5050"
 
   backend-upload:
     env_file:
@@ -86,8 +58,3 @@ services:
     restart: always
     volumes:
       - ./backend/:/code/
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.backend-upload.rule=PathPrefix(`/upload`)"
-      - "traefik.http.routers.backend-upload.entrypoints=web"
-      - "traefik.http.services.backend-upload.loadbalancer.server.port=5050"
