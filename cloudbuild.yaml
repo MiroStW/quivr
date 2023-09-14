@@ -10,6 +10,16 @@ steps:
         ".",
       ]
     id: Build-backend
+  - name: node
+    entrypoint: yarn
+    args: ["install"]
+    dir: frontend
+    id: install-frontend
+  - name: node
+    entrypoint: yarn
+    args: ["run", "create-env"]
+    dir: frontend
+    id: create-env-frontend
   - name: gcr.io/cloud-builders/docker
     args:
       [
