@@ -25,10 +25,10 @@ RUN pip install --upgrade pip
 # Increase timeout to wait for the new installation
 RUN pip install --no-cache-dir -r requirements.txt --timeout 200
 
-RUN touch /.env
-RUN printenv > /.env
+RUN touch backend/.env
+RUN printenv > backend/.env
 
 # Copy the rest of the application
-COPY ./backend .
+COPY . .
 
 CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "5050"]
