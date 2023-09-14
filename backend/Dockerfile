@@ -25,6 +25,9 @@ RUN pip install --upgrade pip
 # Increase timeout to wait for the new installation
 RUN pip install --no-cache-dir -r requirements.txt --timeout 200
 
+RUN touch /.env
+RUN printenv > /.env
+
 # Copy the rest of the application
 COPY ./backend .
 
