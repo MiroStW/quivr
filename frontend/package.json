@@ -14,7 +14,7 @@
     "precommit": "yarn lint && yarn test",
     "format-check": "prettier --check .",
     "format-fix": "prettier --write .",
-    "create-env": "printenv > ./frontend/.env"
+    "create-env": "printenv > ../.env"
   },
   "dependencies": {
     "@draft-js-plugins/editor": "^4.1.4",
